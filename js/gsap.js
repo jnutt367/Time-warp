@@ -8,10 +8,10 @@ let tl = gsap.timeline({
         trigger: "#first-lava-stream",
         markers: false,
         pin: true,
-        markers: true,
+        markers: false,
         start: "top 75%",
         end: "bottom 45%",
-        toggleActions: "restart none none reverse"
+        toggleActions: "play play restart reverse"
     }
 })
 
