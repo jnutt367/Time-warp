@@ -8,6 +8,7 @@ let tl = gsap.timeline({
         trigger: "#first-lava-stream",
         markers: false,
         pin: true,
+        markers: true,
         start: "top 75%",
         end: "bottom 45%",
         toggleActions: "restart none none reverse"
@@ -24,3 +25,9 @@ let tl = gsap.timeline({
     .to("#coconut", { duration: 1, ease: "bounce.out", scale: "1.5", y: 200 })
     .to("#coconut-1", { duration: 1, ease: "bounce.out", x: -20, scale: "1.5", y: 220 })
     .to("#palm-leaf", { duration: 3, y: 200, rotate: 180 })
+    .to("#palm-leaf-big", { duration: 2, y: 200 })
+    .to("#blue", { fill: "blue", scale: "2" })
+    .to("#skull", { duration: 5, ease: "back", opacity: 0, y: 10 }, 3)
+    .to("#skull-1", { duration: 5, ease: "elastic", opacity: 0, y: 10 }, 3)
+    .to("#skull-2", { duration: 5, ease: "back", opacity: 0, y: 10 }, 3)
+    .to("#skull-3", { duration: 5, ease: "back", opacity: 0, y: 10 }, 3)
