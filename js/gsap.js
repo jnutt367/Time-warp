@@ -31,3 +31,6 @@ let tl = gsap.timeline({
     .to("#skull-1", { duration: 5, ease: "elastic", opacity: 0, y: 10 }, 3)
     .to("#skull-2", { duration: 5, ease: "back", opacity: 0, y: 10 }, 3)
     .to("#skull-3", { duration: 5, ease: "back", opacity: 0, y: 10 }, 3)
+    .fromTo("#blue-bubble", { opacity: 0, y: 0 }, { duration: 2, opacity: 1, x: 2, y: -2, repeat: 3 }, 2)
+    .fromTo("#small-blue-bubble", { opacity: 0, y: 0 }, { duration: 1, opacity: 1, y: -2, repeat: 3 }, 2)
+    .fromTo("#blue-ring", { opacity: 0, y: 0 }, { duration: 4, opacity: 1, y: -2, repeat: 3 }, 2)
