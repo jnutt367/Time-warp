@@ -21,3 +21,6 @@ let tl = gsap.timeline({
     .fromTo("#next-cloud-up", { x: 0 }, { duration: 2, x: -100, fill: "black", repeat: -1 }, 0)
     .fromTo("#third-cloud-up", { x: 0 }, { duration: 2, x: -90, fill: "black", repeat: -1 }, 0)
     .fromTo("#Layer_6", { opacity: 1, x: 0 }, { duration: .1, opacity: 1, x: 5, ease: "bounce.in", repeat: 50 })
+    .to("#coconut", { duration: 1, ease: "bounce.out", scale: "1.5", y: 200 })
+    .to("#coconut-1", { duration: 1, ease: "bounce.out", x: -20, scale: "1.5", y: 220 })
+    .to("#palm-leaf", { duration: 3, y: 200, rotate: 180 })
