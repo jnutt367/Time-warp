@@ -1,21 +1,23 @@
 gsap.registerPlugin(ScrollTrigger)
 
 let tl = gsap.timeline({
-    defaults: {
-        opacity: 1
-    },
-    scrollTrigger: {
-        trigger: "#first-lava-stream",
-        markers: false,
-        pin: true,
-        markers: false,
-        start: "top 75%",
-        end: "bottom 45%",
-        toggleActions: "play play restart reverse"
-    }
-})
-
-.fromTo("#red-bubble", { fill: "red", opacity: .7 }, { duration: 2, opacity: 1, x: 0, scale: 1.2, ease: "elastic.out", y: -10, repeat: -1 }, 2)
+        defaults: {
+            opacity: 1
+        },
+        scrollTrigger: {
+            trigger: "#first-lava-stream",
+            markers: false,
+            pin: true,
+            markers: false,
+            start: "top 75%",
+            end: "bottom 45%",
+            toggleActions: "play play restart reverse"
+        }
+    })
+    .to("#blue", { fill: "red", scale: "2" })
+    .to("#terry", { duration: 5, x: 200, y: -1200, scale: "0.4", ease: "elastic.inOut" })
+    .to("#terry", { duration: 7, opacity: 1, x: 2000, repeat: -1 })
+    .fromTo("#red-bubble", { fill: "red", opacity: .7 }, { duration: 2, opacity: 1, x: 0, scale: 1.2, ease: "back", y: -10, repeat: -1 }, 2)
     .fromTo("#fifth-cloud-up", { x: 0 }, { duration: 3, x: -90, fill: "black", repeat: -1 }, 0)
     .fromTo("#fourth-cloud-up", { x: 0 }, { duration: 1.5, x: -90, fill: "black", repeat: -1 }, 0)
     .fromTo("#bottom-cloud", { x: 0 }, { duration: 2, x: -50, fill: "black", repeat: -1 }, 0)
@@ -40,6 +42,6 @@ let tl = gsap.timeline({
     .to("#caveman2-head", { y: 100, x: -400, ease: "bounce.out" }, 8)
     .to("#caveman2-chin", { y: 50, x: -500 }, 8)
     .to("#face-lines", { x: -400 }, 8)
-    .to("#caveman1", { x: -600 }, 7)
+    .to("#caveman1", { x: -400, ease: "elastic.in" }, 7)
     .fromTo("#sheriff-door", { opacity: 0.2 }, { opacity: 0.8, repeat: 4, ease: "elastic" })
     .fromTo("#speech-bubble-outlaw", { opacity: 0 }, { opacity: 1, y: -50, x: -50, scale: 1.1, ease: "elastic", duration: 2 }, 20)
