@@ -14,6 +14,9 @@ let tl = gsap.timeline({
             toggleActions: "play play restart reverse"
         }
     })
+    .fromTo("#globe", { opacity: 0 }, { duration: 3, opacity: 1 })
+    .fromTo("#globe-banner", { opacity: 0 }, { duration: 1.4, opacity: 1 })
+    .fromTo("#top-header-bg", { opacity: 0 }, { duration: 2, opacity: 1 })
     .to("#blue", { fill: "red", scale: "2" })
     .to("#terry", { duration: 5, x: 200, y: -1200, scale: "0.4", ease: "elastic.inOut" })
     .to("#terry", { duration: 7, opacity: 1, x: 2000, repeat: -1 })
@@ -45,3 +48,5 @@ let tl = gsap.timeline({
     .to("#caveman1", { x: -400, ease: "elastic.in" }, 7)
     .fromTo("#sheriff-door", { opacity: 0.2 }, { opacity: 0.8, repeat: 4, ease: "elastic" })
     .fromTo("#speech-bubble-outlaw", { opacity: 0 }, { opacity: 1, y: -50, x: -50, scale: 1.1, ease: "elastic", duration: 2 }, 20)
+    .to("#bull", { scale: 1, rotate: 360, y: -200, x: -100 }, 20)
+    .to("#barrel", { duration: 1, x: 500, y: 200, rotate: 720, ease: "back" })
