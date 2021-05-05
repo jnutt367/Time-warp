@@ -41,3 +41,4 @@ let tl = gsap.timeline({
     .to("#caveman2-chin", { y: 50, x: -500 }, 8)
     .to("#face-lines", { x: -400 }, 8)
     .to("#caveman1", { x: -600 }, 7)
+    .fromTo("#sheriff-door", { opacity: 1 }, { opacity: 0, repeat: -1 })
