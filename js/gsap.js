@@ -14,9 +14,9 @@ let tl = gsap.timeline({
             toggleActions: "play play restart reverse"
         }
     })
-    .fromTo("#globe", { opacity: 0 }, { duration: 3, opacity: 1 })
-    .fromTo("#globe-banner", { opacity: 0 }, { duration: 1.4, opacity: 1 })
-    .fromTo("#top-header-bg", { opacity: 0 }, { duration: 2, opacity: 1 })
+    .fromTo("#globe", { opacity: 0 }, { duration: .5, opacity: 1 })
+    .fromTo("#globe-banner", { opacity: 0 }, { duration: 0.5, opacity: 1 })
+    .fromTo("#top-header-bg", { opacity: 0 }, { duration: 0.7, opacity: 1 })
     .to("#blue", { fill: "red", scale: "2" })
     .to("#terry", { duration: 5, x: 200, y: -1200, scale: "0.4", ease: "elastic.inOut" })
     .to("#terry", { duration: 7, opacity: 1, x: 2000, repeat: -1 })
