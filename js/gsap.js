@@ -42,4 +42,4 @@ let tl = gsap.timeline({
     .to("#face-lines", { x: -400 }, 8)
     .to("#caveman1", { x: -600 }, 7)
     .fromTo("#sheriff-door", { opacity: 0.2 }, { opacity: 0.8, repeat: 4, ease: "elastic" })
-    .fromTo("#speech-bubble-outlaw", { opacity: 0 }, { opacity: 1, y: -50, x: -50, scale: 1.1, ease: "elastic", duration: 2 }, 10)
+    .fromTo("#speech-bubble-outlaw", { opacity: 0 }, { opacity: 1, y: -50, x: -50, scale: 1.1, ease: "elastic", duration: 2 }, 20)
