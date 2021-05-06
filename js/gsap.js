@@ -14,9 +14,9 @@ let tl = gsap.timeline({
             toggleActions: "play play restart reverse"
         }
     })
-    .fromTo("#globe", { opacity: 0 }, { duration: .5, opacity: 1 })
-    .fromTo("#globe-banner", { opacity: 0 }, { duration: 0.5, opacity: 1 })
-    .fromTo("#top-header-bg", { opacity: 0 }, { duration: 0.7, opacity: 1 })
+    .fromTo("#globe", { opacity: 0, scale: .1 }, { duration: 2, scale: 1, ease: "elastic", opacity: 1 })
+    .fromTo("#top-header-bg", { opacity: 0, scale: .5, fill: "black" }, { duration: 3, scale: 1, x: 0, ease: "elastic", opacity: 1 }, +.5)
+    .fromTo("#globe-banner", { opacity: 0, y: -200 }, { y: 0, duration: 1.5, ease: "elastic.out", opacity: 1 }, +1)
     .to("#blue", { fill: "red", scale: "2" })
     .to("#terry", { duration: 5, x: 200, y: -1200, scale: "0.4", ease: "elastic.inOut" })
     .to("#terry", { duration: 7, opacity: 1, x: 2000, repeat: -1 })
@@ -45,7 +45,7 @@ let tl = gsap.timeline({
     .to("#caveman2-head", { y: 100, x: -400, ease: "bounce.out" }, 8)
     .to("#caveman2-chin", { y: 50, x: -500 }, 8)
     .to("#face-lines", { x: -400 }, 8)
-    .to("#caveman1", { x: -400, ease: "elastic.in" }, 7)
+    .to("#caveman1", { x: -700, ease: "elastic.in" }, 7)
     .fromTo("#sheriff-door", { opacity: 0.2 }, { opacity: 0.8, repeat: 4, ease: "elastic" })
     .fromTo("#speech-bubble-outlaw", { opacity: 0 }, { opacity: 1, y: -50, x: -50, scale: 1.1, ease: "elastic", duration: 2 }, 20)
     .to("#bull", { scale: 1, rotate: 360, y: -200, x: -100 }, 20)
