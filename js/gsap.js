@@ -76,6 +76,22 @@ let cavemanRun = gsap.timeline({
     .to("#caveman1", { x: -700, ease: "elastic.in" }, 1)
 
 
+let trainDrive = gsap.timeline({
+        defaults: { duration: 1, ease: "elastic" },
+        scrollTrigger: {
+            trigger: "#bottom-shrub",
+            scrub: false,
+            start: "top 50%",
+            end: "bottom bottom",
+            // markers: true,
+            toggleActions: "restart none none reverse"
+        }
+    })
+    .fromTo("#train", {}, {})
+
+
+
+
 let sheriffDraw = gsap.timeline({
         defaults: { duration: 1, ease: "elastic" },
         scrollTrigger: {
@@ -92,15 +108,13 @@ let sheriffDraw = gsap.timeline({
     .to("#bull", { scale: 1, rotate: 360, y: -200, x: -100 }, 0)
     .to("#barrel", { duration: 1, x: 500, y: 200, rotate: 720, ease: "back" }, 1)
 
-
-//let smoke = gsap.timeline({repeat: -1,});
-
-//smoke.from(".ship-smoke",{
-// duration: 2,
-// scale: 0,
-// transformOrigin: "center center",
-// stagger:{each: 0.6},
-//})
-//.to(".ship-smoke",{
-// opacity: 0
-//});
+let trailerRoll = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#speech-bubble-outlaw",
+            scrub: false,
+            start: "top top",
+            end: "bottom bottom",
+            toggleActions: "restart none none reverse"
+        }
+    })
+    .to("#trailer", { x: 300 })
