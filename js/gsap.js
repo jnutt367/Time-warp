@@ -18,6 +18,7 @@ let tl = gsap.timeline({
     .fromTo("#top-header-bg", { opacity: 0, scale: .5, fill: "black" }, { duration: 3, scale: 1, x: 0, ease: "elastic", opacity: 1 }, +.5)
     .fromTo("#globe-banner", { opacity: 0, y: -200 }, { y: 0, duration: 1.5, ease: "elastic.out", opacity: 1 }, +1)
     .to("#blue", { fill: "red", scale: "2" })
+    .to("#hourglass", { fill: "white", opacity: 0.5 })
     .to("#terry", { duration: 5, x: 200, y: -1200, scale: "0.4", ease: "elastic.inOut" })
     .to("#terry", { duration: 7, opacity: 1, x: 2000, repeat: -1 })
     .fromTo("#red-bubble", { fill: "red", opacity: .7 }, { duration: 2, opacity: 1, x: 0, scale: 1.2, ease: "back", y: -10, repeat: -1 }, 2)
