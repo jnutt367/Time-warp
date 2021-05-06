@@ -23,7 +23,7 @@ let tl = gsap.timeline({
 let dinoLand = gsap.timeline({
         defaults: { duration: 2, ease: "elastic" },
         scrollTrigger: {
-            trigger: "#fifth-cloud-up",
+            trigger: "#wormhole",
             scrub: false,
             start: "top top",
             end: "bottom bottom",
