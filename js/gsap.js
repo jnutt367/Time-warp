@@ -1,5 +1,7 @@
 gsap.registerPlugin(ScrollTrigger)
 
+
+
 let tl = gsap.timeline({
         defaults: { duration: 1, ease: "elastic" },
         scrollTrigger: {
@@ -15,7 +17,9 @@ let tl = gsap.timeline({
     .fromTo("#top-header-bg", { opacity: 0, scale: .5, fill: "black" }, { duration: 3, scale: 1, x: 0, ease: "elastic", opacity: 1 }, +.5)
     .fromTo("#globe-banner", { opacity: 0, y: -200 }, { y: 0, duration: 1.5, ease: "elastic.out", opacity: 1 }, +1)
     .to("#blue", { fill: "red", scale: "2" })
-    .to("#hourglass", { fill: "white" }, +4)
+    .to("#hourglass-frame", { duration: 1, fill: "gray", rotate: 360 }, 1)
+    .to("#hourglass", { fill: "black", stroke: "white", duration: 5 }, 2)
+
 
 
 
@@ -32,7 +36,7 @@ let dinoLand = gsap.timeline({
         }
     })
     .to("#terry", { duration: 5, x: 200, y: -1200, scale: "0.4", ease: "elastic.inOut" })
-    .to("#terry", { duration: 5, opacity: 1, x: 1400, ease: "power1.in", repeat: -1 }, 0)
+    .to("#terry", { duration: 5, opacity: 1, x: 1400, ease: "power1.out", repeat: -1 }, 0)
     .fromTo("#red-bubble", { fill: "red", opacity: .7 }, { duration: 2, opacity: .5, x: 0, scale: 1.2, ease: "back", y: -10, repeat: -1 }, 2)
     .fromTo("#fifth-cloud-up", { x: 0 }, { y: -100, duration: 3, x: -90, fill: "gray", ease: "back", opacity: .9, repeat: -1 }, 0)
     .fromTo("#fourth-cloud-up", { x: 0 }, { y: -100, duration: 3, x: -90, fill: "gray", ease: "back", opacity: .8, repeat: -1 }, 0)
