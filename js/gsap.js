@@ -35,7 +35,7 @@ let dinoLand = gsap.timeline({
             toggleActions: "restart none none reverse"
         }
     })
-    .to("#terry", { duration: 5 y: -1200, scale: "0.4", ease: "elastic.inOut" })
+    .to("#terry", { duration: 7, x: 10, y: -1200, scale: "0.4", ease: "elastic.inOut" })
     .to("#terry", { duration: 5, opacity: 1, x: 1400, ease: "power1.out", repeat: -1 }, 0)
     .fromTo("#red-bubble", { fill: "red", opacity: .7 }, { duration: 2, opacity: .5, x: 0, scale: 1.2, ease: "back", y: -10, repeat: -1 }, 2)
     .fromTo("#fifth-cloud-up", { x: 0 }, { y: -100, duration: 3, x: -90, fill: "gray", ease: "back", opacity: .9, repeat: -1 }, 0)
