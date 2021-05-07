@@ -39,6 +39,8 @@ let dinoLand = gsap.timeline({
     .fromTo("#bottom-cloud", { x: 0 }, { y: -100, x: -50, fill: "gray", ease: "back", opacity: .7, repeat: -1 }, 0)
     .fromTo("#next-cloud-up", { x: 0 }, { y: -100, x: -100, fill: "gray", ease: "back", opacity: .6, repeat: -1 }, 0)
     .fromTo("#third-cloud-up", { x: 0 }, { y: -100, x: -90, fill: "gray", ease: "back", opacity: .5, repeat: -1 }, 0)
+    .to("#lava", { scale: 2 }, 3)
+    .to("#lava-bed", { ease: "elastic", scale: 1.05, repeat: 1 })
     .fromTo("#Layer_6", { opacity: 1, x: 0 }, { duration: .1, opacity: 1, x: 5, ease: "bounce", repeat: 50 })
     .to("#coconut", { duration: 1, ease: "bounce.out", scale: "1.5", y: 200 })
     .to("#coconut-1", { duration: 1, ease: "bounce.out", x: -20, scale: "1.5", y: 220 })
