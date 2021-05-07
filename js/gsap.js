@@ -18,7 +18,7 @@ let tl = gsap.timeline({
     .fromTo("#globe-banner", { opacity: 0, y: -200 }, { y: 0, duration: 1.5, ease: "elastic.out", opacity: 1 }, +1)
     .to("#blue", { fill: "red", scale: "2" })
     .to("#hourglass-frame", { duration: 1, fill: "gray", rotate: 360 }, 1)
-    .to("#hourglass", { fill: "black", stroke: "white", duration: 5 }, 2)
+    .to("#hourglass", { fill: "white", stroke: "white", duration: 5 }, 2)
 
 
 
@@ -73,7 +73,7 @@ let cavemanRun = gsap.timeline({
             toggleActions: "restart none none reverse"
         }
     })
-    //.fromTo("#dino", { x: 700 }, { x: 0 })
+    .fromTo("#dino", { x: 700 }, { x: 0 })
     .fromTo("#dino-speech-bubble", { opacity: 0 }, { duration: 2, y: -50, opacity: 1, ease: "elastic.out" })
     .to("#dino-speech-bubble", { duration: 2, opacity: 0 })
     .to("#caveman2-club", { y: 30 }, 1)
