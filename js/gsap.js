@@ -67,10 +67,10 @@ let cavemanRun = gsap.timeline({
         scrollTrigger: {
             trigger: "#tar",
             scrub: false,
-            start: "top top",
+            start: "top 75%",
             end: "bottom bottom",
             // markers: true,
-            toggleActions: "restart none none reverse"
+            toggleActions: "restart none reverse reset"
         }
     })
     .fromTo("#dino", { x: 700 }, { x: 0 })
