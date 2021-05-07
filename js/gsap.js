@@ -11,11 +11,11 @@ let tl = gsap.timeline({
             toggleActions: "restart none none reverse"
         }
     })
-    .fromTo("#globe", { opacity: 0, scale: .1 }, { duration: 2, scale: 1, ease: "elastic", opacity: 1 })
+    .fromTo("#globe", { opacity: 0, y: 200, scale: .1 }, { duration: 2, scale: 1, y: 0, ease: "elastic", opacity: 1 })
     .fromTo("#top-header-bg", { opacity: 0, scale: .5, fill: "black" }, { duration: 3, scale: 1, x: 0, ease: "elastic", opacity: 1 }, +.5)
     .fromTo("#globe-banner", { opacity: 0, y: -200 }, { y: 0, duration: 1.5, ease: "elastic.out", opacity: 1 }, +1)
     .to("#blue", { fill: "red", scale: "2" })
-    .to("#hourglass", { fill: "white", opacity: 0.5 }, +4)
+    .to("#hourglass", { fill: "white" }, +4)
 
 
 
