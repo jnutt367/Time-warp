@@ -48,8 +48,8 @@ let dinoLand = gsap.timeline({
     .fromTo("#Layer_6", { opacity: 1, x: 0 }, { duration: .1, opacity: 1, x: 5, ease: "bounce", repeat: 50 })
     .to("#coconut", { duration: 1, ease: "bounce.out", scale: "1.5", y: 200 })
     .to("#coconut-1", { duration: 1, ease: "bounce.out", x: -20, scale: "1.5", y: 220 })
-    .to("#palm-leaf", { duration: 3, y: 200, rotate: 180 })
-    .to("#palm-leaf-big", { duration: 2, y: 200 })
+    .to("#palm-leaf", { duration: 3, y: 200, rotate: 180, ease: "none" }, 7.5)
+    .to("#palm-leaf-big", { duration: 2, y: 200, ease: "none" }, 8.5)
     .to("#blue", { fill: "orange", ease: "power4.out", duration: -2, scale: "2" })
     .to("#skull", { duration: 5, ease: "back", opacity: 0, y: 10 }, 3)
     .to("#skull-1", { duration: 5, ease: "elastic", opacity: 0, y: 10 }, 3)
@@ -73,13 +73,18 @@ let cavemanRun = gsap.timeline({
             toggleActions: "restart none none reverse"
         }
     })
-    .to("#caveman1-club", { y: 180, rotate: 90 }, 2)
+    //.fromTo("#dino", { x: 700 }, { x: 0 })
+    .fromTo("#dino-speech-bubble", { opacity: 0 }, { duration: 2, y: -50, opacity: 1, ease: "elastic.out" })
+    .to("#dino-speech-bubble", { duration: 2, opacity: 0 })
     .to("#caveman2-club", { y: 30 }, 1)
     .to("#caveman2", { x: -400, ease: "elastic.in" }, 1)
-    .to("#caveman2-head", { y: 100, x: -400, ease: "bounce.out" }, 1)
-    .to("#caveman2-chin", { y: 50, x: -500 }, 1)
-    .to("#face-lines", { x: -400 }, 1)
-    .to("#caveman1", { x: -700, ease: "elastic.in" }, 1)
+    .to("#caveman2-chin", { y: 100, x: -400, ease: "bounce.out" }, 1)
+    .to("#caveman2-head", { y: 50, x: -500 }, 1)
+
+.to("#caveman1", { x: -600, ease: "elastic.in" }, 1)
+    .fromTo("#full-train", { x: 1400 }, { duration: 3, x: 0, ease: "rough" })
+    .to("#full-train", { x: 0 })
+
 
 
 let trainDrive = gsap.timeline({
@@ -109,10 +114,19 @@ let sheriffDraw = gsap.timeline({
             toggleActions: "restart none none reverse"
         }
     })
-    .fromTo("#sheriff-door", { opacity: 0.2 }, { opacity: 0.8, repeat: 4, ease: "elastic" })
+    .to("#S", { fill: "red" }, 1)
+    .to("#H", { fill: "green" }, 1)
+    .to("#E", { fill: "blue" }, 1)
+    .to("#R", { fill: "green" }, 1)
+    .to("#I", { fill: "blue" }, 1)
+    .to("#F", { fill: "red", ease: "bounce.in" }, 1)
+    .to("#F2", { fill: "red" }, 1)
+    .fromTo("#sheriff-door-left", { opacity: 0 }, { duration: .8, opacity: 1, repeat: 1, ease: "none" })
+
+.fromTo("#sheriff-door", { opacity: 0 }, { duration: 1, opacity: 1, repeat: 4, ease: "none" }, +1)
     .fromTo("#speech-bubble-outlaw", { opacity: 0 }, { opacity: 1, y: -50, x: -50, scale: 1.1, ease: "elastic", duration: 2 }, 1)
     .to("#bull", { scale: 1, rotate: 360, y: -200, x: -100 }, 0)
-    .to("#barrel", { duration: 1, x: 500, y: 200, rotate: 720, ease: "back" }, 1)
+    .fromTo("#barrel", { y: 100 }, { duration: 1, x: 500, y: 200, rotate: 720, ease: "back" }, 1)
 
 let trailerRoll = gsap.timeline({
         scrollTrigger: {
