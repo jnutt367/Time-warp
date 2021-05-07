@@ -34,12 +34,12 @@ let dinoLand = gsap.timeline({
     .to("#terry", { duration: 10, x: 200, y: -1200, scale: "0.4", ease: "elastic.inOut" })
     .to("#terry", { duration: 20, opacity: 1, x: 1400, repeat: -1 })
     .fromTo("#red-bubble", { fill: "red", opacity: .7 }, { duration: 2, opacity: .5, x: 0, scale: 1.2, ease: "back", y: -10, repeat: -1 }, 2)
-    .fromTo("#fifth-cloud-up", { x: 0 }, { duration: 3, x: -90, fill: "gray", opacity: .9, repeat: -1 }, 0)
-    .fromTo("#fourth-cloud-up", { x: 0 }, { duration: 3, x: -90, fill: "gray", opacity: .8, repeat: -1 }, 0)
-    .fromTo("#bottom-cloud", { x: 0 }, { x: -50, fill: "gray", opacity: .7, repeat: -1 }, 0)
-    .fromTo("#next-cloud-up", { x: 0 }, { x: -100, fill: "gray", opacity: .6, repeat: -1 }, 0)
-    .fromTo("#third-cloud-up", { x: 0 }, { x: -90, fill: "gray", opacity: .5, repeat: -1 }, 0)
-    .fromTo("#Layer_6", { opacity: 1, x: 0 }, { duration: .1, opacity: 1, x: 5, ease: "bounce.in", repeat: 50 })
+    .fromTo("#fifth-cloud-up", { x: 0 }, { y: -100, duration: 3, x: -90, fill: "gray", ease: "back", opacity: .9, repeat: -1 }, 0)
+    .fromTo("#fourth-cloud-up", { x: 0 }, { y: -100, duration: 3, x: -90, fill: "gray", ease: "back", opacity: .8, repeat: -1 }, 0)
+    .fromTo("#bottom-cloud", { x: 0 }, { y: -100, x: -50, fill: "gray", ease: "back", opacity: .7, repeat: -1 }, 0)
+    .fromTo("#next-cloud-up", { x: 0 }, { y: -100, x: -100, fill: "gray", ease: "back", opacity: .6, repeat: -1 }, 0)
+    .fromTo("#third-cloud-up", { x: 0 }, { y: -100, x: -90, fill: "gray", ease: "back", opacity: .5, repeat: -1 }, 0)
+    .fromTo("#Layer_6", { opacity: 1, x: 0 }, { duration: .1, opacity: 1, x: 5, ease: "bounce", repeat: 50 })
     .to("#coconut", { duration: 1, ease: "bounce.out", scale: "1.5", y: 200 })
     .to("#coconut-1", { duration: 1, ease: "bounce.out", x: -20, scale: "1.5", y: 220 })
     .to("#palm-leaf", { duration: 3, y: 200, rotate: 180 })
@@ -118,3 +118,15 @@ let trailerRoll = gsap.timeline({
         }
     })
     .to("#trailer", { x: 300 })
+
+
+let sunRise = gsap.timeline({
+        srcollTrigger: {
+            trigger: "#surfer",
+            scrub: false,
+            start: "top top",
+            end: "bottom bottom",
+            toggleActions: "restart none none reverse"
+        }
+    })
+    .fromTo("#sun", { opacity: 0, y: 800 }, { duration: 2, opacity: 1, y: 0 })
