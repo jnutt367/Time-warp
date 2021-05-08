@@ -140,9 +140,26 @@ let trailerRoll = gsap.timeline({
     .to("#trailer", { x: 300 })
 
 
+
+
+let tubbsGo = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#trailer",
+            scrub: false,
+            start: "top top",
+            end: "bottom bottom",
+            toggleActions: "restart none none reverse"
+        }
+    })
+    .to("#surfer", { duration: 10, x: -400 })
+    .to("#car", { x: 700 }, 1)
+    .fromTo("#tubbs", { opacity: 1 }, { opacity: 0 }, 2)
+    .to("#car", { duration: 1, ease: "elastic.in", x: 1500 }, 4)
+
+
 let sunRise = gsap.timeline({
         srcollTrigger: {
-            trigger: "#surfer",
+            trigger: "#trigger",
             scrub: false,
             start: "top top",
             end: "bottom bottom",
