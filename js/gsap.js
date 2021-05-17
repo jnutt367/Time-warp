@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger)
 
-
+gsap.to("#blue", { strokeWidth: 5, stroke: "blue" })
 
 let tl = gsap.timeline({
         defaults: { duration: 1, ease: "elastic" },
@@ -144,9 +144,9 @@ let trailerRoll = gsap.timeline({
 
 let tubbsGo = gsap.timeline({
         scrollTrigger: {
-            trigger: "#trailer",
+            trigger: "#tubbs",
             scrub: false,
-            start: "top top",
+            start: "top 75%",
             end: "bottom bottom",
             toggleActions: "restart none none reverse"
         }
@@ -154,7 +154,7 @@ let tubbsGo = gsap.timeline({
     .to("#surfer", { duration: 10, x: -400 })
     .to("#car", { x: 700 }, 1)
     .fromTo("#tubbs", { opacity: 1 }, { opacity: 0 }, 2)
-    .to("#car", { duration: 1, ease: "elastic.in", x: 1500 }, 4)
+    .to("#car", { duration: 1, ease: "elastic.in", x: 1500 }, 2)
 
 
 let sunRise = gsap.timeline({
