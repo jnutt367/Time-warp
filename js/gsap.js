@@ -1,7 +1,10 @@
 gsap.registerPlugin(ScrollTrigger)
 
-gsap.to("#blue", { strokeWidth: 5, stroke: "blue" })
+gsap.to(".main-img", { x: 200 })
+gsap.to(".stroll", { fontSize: 30, color: "red", y: -10, ease: "elastic", duration: 3 })
+gsap.fromTo(".title-h2", { x: 400 }, { duration: 1, x: 0, color: "white" }, 2)
 
+gsap.to(".main-img", { duration: 2, x: 300, y: 330, borderRadius: 50 })
 let tl = gsap.timeline({
         defaults: { duration: 1, ease: "elastic" },
         scrollTrigger: {
